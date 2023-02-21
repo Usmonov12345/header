@@ -1,33 +1,34 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import {Link ,  NavLink } from 'react-router-dom'
 import Logo from '../img/logo.png'
 function Header() {
   return (
     <div>
       
       <header className='header'>
-          <Link to={'/'}>
+          <Link to={'Main'}>
              <img src={Logo} alt="" className='logo' />
           </Link>
         <ul className='list' >
-          <li>
-            <Link to={'Onesection'}>
+          <li className='item'>
+            <NavLink to={'Onesection'} className="item">
             Onesection
-            </Link>
+            </NavLink>
           </li>
-          <li>
-            <Link to={'Card'}>
+          <li className='item'>
+            <NavLink to={'Card'} className="item">
               Card
-            </Link>
+            </NavLink>
           </li>
-          <li>
+          <li className='item'>
             
-            <Link to={'Box'}>Box</Link>
+            <NavLink to={'Box'} className="item">Box</NavLink>
           </li>
         </ul>
-        
+       
         <button >
           send
+        
         </button>
       </header>
       
